@@ -1,0 +1,32 @@
+##작성자 : 조준희
+##학번 : 2017038076
+##학과 : 소프트웨어
+##조 : 파이썬클라쓰(4조)
+##프로그램 내용 : views.py에서 템플릿으로 변수를 보내주고 그를 활용한 사례(이하 여러창의 내용은 같음)
+
+<form action="{% url 'login' %}" method="POST">  ##login창에서 템플릿 변수를 활용한 사례
+  {% csrf_token %}
+  <center>
+  <div class="form-group" style="width:70%;">
+    {% if error1 == 1 %}
+      <h2 style='color:red'><b>해당 계정의 아이디 또는 비밀번호가 일치하지 않습니다.</h2>
+    {% endif %}
+
+
+
+<form action="{% url 'signup' %}" method="POST"> ##signup창에서 템플릿 변수를 활용한 사례
+    {% csrf_token %}
+      <div class="table">
+    <table>
+      <h2 style="margin-top:50px; margin-bottom:50px;">회원가입</h2>
+            {% if error == 1 %}
+            <h2 style="color:red"><b>비밀번호가 일치하지 않습니다.</h2>
+            {% elif error == 2 %}
+            <h2 style="color:red"><b>해당 아이디가 이미 존재합니다.</h2>
+            {% elif error == 3 %}
+            <h2 style="color:red"><b>이름을 입력해주세요.</h2>
+            {% elif error == 4 %}
+            <h2 style="color:red"><b>주민번호 앞 6자리를 정확히 입력해주세요</h2>
+            {% elif error == 5 %}
+            <h2 style="color:red"><b>이미 해당 신상의 계정이 존재합니다.</h2>
+            {% endif %}
