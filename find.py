@@ -4,7 +4,7 @@
 #조 : 파이썬클라쓰(4조)
 #프로그램 내용 : 아이디 찾기, 비밀번호 찾기
 #최종 완성일자 : 6월 14일
-#####################
+######################
 def find_id(request) : #User객체들 중 유일한 값을 활용하여 해당되는 객체를 찾고 해당객체의 id필드를 html창으로 보내줌으로써 아이디찾는 기능을 구현
     if request.method == "POST" :
         if len(request.POST.get('identification_number')) != 6 :
