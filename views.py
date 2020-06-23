@@ -4,6 +4,7 @@
 #조 : 파이썬클라쓰(4조)
 #프로그램 내용 : 홈페이지 회원가입과 로그인, 로그아웃, 아이디 찾기, 비밀번호 찾기
 #최종 완성일자 : 6월 14일
+##############################
 from django.shortcuts import render, redirect
 from websites import templates
 from .models import User
